@@ -6,7 +6,7 @@ import { FeatureTiles } from "@/components/FeatureTiles";
 import { Button } from "@/components/ui/button";
 import { MessageSquare, FileCheck, Gamepad2 } from "lucide-react";
 import { siteConfig } from "@/config/site";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg-new.png";
 import pageBg from "@/assets/page-bg.png";
 
 const Index = () => {
@@ -28,8 +28,6 @@ const Index = () => {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 bg-gradient-overlay"></div>
-        
         <div className="relative z-10 text-center px-4 animate-fade-in">
           {/* Logo placeholder - User should upload their logo */}
           <div className="mb-8">

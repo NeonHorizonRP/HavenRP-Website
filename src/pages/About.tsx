@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Target, Users, Zap, Shield } from "lucide-react";
-import aboutBg from "@/assets/about-bg.jpg";
+import heroBg from "@/assets/hero-bg-new.png";
 import pageBg from "@/assets/page-bg.png";
 
 const About = () => {
@@ -46,12 +46,11 @@ const About = () => {
         <section
           className="relative min-h-[60vh] flex items-center justify-center mb-16"
           style={{
-            backgroundImage: `url(${aboutBg})`,
+            backgroundImage: `url(${heroBg})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         >
-          <div className="absolute inset-0 bg-gradient-overlay"></div>
           <div className="relative z-10 container mx-auto px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-heading font-bold mb-4">
               <span className="text-neon-cyan">About </span>
