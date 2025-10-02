@@ -1,6 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
-import { MessageSquare, Crown, Shield, Code, Users } from "lucide-react";
+import { MessageSquare, Crown, Shield, Code, Users, DollarSign, Home, ShoppingBag, Wrench, Settings, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import heroBg from "@/assets/hero-bg-new.png";
@@ -9,64 +9,100 @@ import pageBg from "@/assets/page-bg.png";
 const Staff = () => {
   const staffMembers = [
     {
-      name: "Alex Rivera",
-      role: "Owner & Founder",
+      name: "Solao",
+      role: "The Sky Boss",
       icon: Crown,
       color: "text-primary",
       borderColor: "border-primary/30",
-      bio: "Founded HavenRP with a vision for quality roleplay. Oversees all server operations and development.",
-      timezone: "PST (UTC-8)",
-      contact: "Discord: alexrivera",
+      bio: "The Sky Boss himself! Solao is the powerhouse keeping the city alive, overseeing server development and big-picture decisions so everything runs smoothly.",
     },
     {
-      name: "Jordan Matthews",
-      role: "Head Administrator",
-      icon: Shield,
+      name: "Steve",
+      role: "Finance & Gang Administration",
+      icon: DollarSign,
       color: "text-secondary",
       borderColor: "border-secondary/30",
-      bio: "Leads the staff team and handles high-level administrative decisions. 5+ years of RP management experience.",
-      timezone: "EST (UTC-5)",
-      contact: "Discord: jordanmatthews",
+      bio: "Our behind-the-scenes wizard handling the city's finances and making sure gang administration stays on track.",
     },
     {
-      name: "Sam Chen",
-      role: "Lead Developer",
-      icon: Code,
+      name: "Megs",
+      role: "Public Relations",
+      icon: MessageSquare,
       color: "text-accent",
       borderColor: "border-accent/30",
-      bio: "Develops custom scripts and maintains server infrastructure. Creates unique features for HavenRP.",
-      timezone: "CST (UTC-6)",
-      contact: "Discord: samchen",
+      bio: "Got an issue? Megs has your back! She's the face of public relations, handling Discord chaos and keeping the community connected.",
     },
     {
-      name: "Taylor Johnson",
-      role: "Community Manager",
-      icon: Users,
+      name: "Bryan",
+      role: "Server Development",
+      icon: Code,
       color: "text-blue-accent",
       borderColor: "border-blue-accent/30",
-      bio: "Manages community events, Discord, and player relations. Your go-to for community questions.",
-      timezone: "EST (UTC-5)",
-      contact: "Discord: taylorjohnson",
+      bio: "New to the FiveM scene but full of energy! Bryan dives into server development, learns fast, and makes sure every player's voice is heard.",
     },
     {
-      name: "Morgan Lee",
-      role: "Senior Moderator",
-      icon: Shield,
+      name: "Michael",
+      role: "Housing Specialist",
+      icon: Home,
       color: "text-primary",
       borderColor: "border-primary/30",
-      bio: "Handles player reports, enforces rules, and assists with applications. Active across all timezones.",
-      timezone: "GMT (UTC+0)",
-      contact: "Discord: morganlee",
+      bio: "Looking for your dream house? Michael's your go-to guy. He'll help design and build the perfect place within budget, of course!",
     },
     {
-      name: "Casey Brooks",
-      role: "Moderator",
+      name: "Chihiro",
+      role: "Housing & Merchandise",
+      icon: ShoppingBag,
+      color: "text-secondary",
+      borderColor: "border-secondary/30",
+      bio: "Not only helping out with housing, but also spearheading community merch drops — so you can rep the city in style.",
+    },
+    {
+      name: "Lorenzo",
+      role: "Vehicle Tuning Master",
+      icon: Wrench,
+      color: "text-accent",
+      borderColor: "border-accent/30",
+      bio: "The master of engines — tuning, tweaking, and making every ride feel just right. Community input fuels his underground workshop.",
+    },
+    {
+      name: "Ant",
+      role: "Tuning, Services & Events",
+      icon: Settings,
+      color: "text-blue-accent",
+      borderColor: "border-blue-accent/30",
+      bio: "Part gearhead, part city planner. Ant helps with tuning, manages documentation, runs all city services, and throws events that let the community cut loose.",
+    },
+    {
+      name: "Scarlett",
+      role: "Housing Administration",
+      icon: Home,
+      color: "text-primary",
+      borderColor: "border-primary/30",
+      bio: "Quiet but powerful — Scarlett works behind the curtains making sure housing administration stays on point.",
+    },
+    {
+      name: "Rafa",
+      role: "Gangs & Tuning",
       icon: Shield,
       color: "text-secondary",
       borderColor: "border-secondary/30",
-      bio: "Supports players in-game and on Discord. Helps with technical issues and roleplay questions.",
-      timezone: "PST (UTC-8)",
-      contact: "Discord: caseybrooks",
+      bio: "Right-hand to gangs and tuning crews, Rafa helps keep both scenes organized and thriving.",
+    },
+    {
+      name: "Bubbles",
+      role: "Gang Admin & City Reports",
+      icon: FileText,
+      color: "text-accent",
+      borderColor: "border-accent/30",
+      bio: "Balancing gangs and city life! Bubbles helps with gang administration while also running in-city reports for the community.",
+    },
+    {
+      name: "Green",
+      role: "Gang Administration",
+      icon: Shield,
+      color: "text-blue-accent",
+      borderColor: "border-blue-accent/30",
+      bio: "Fresh on the staff team — Green is stepping into the world of gang administration and already making waves.",
     },
   ];
 
@@ -85,11 +121,11 @@ const Staff = () => {
         >
           <div className="relative z-10 container mx-auto px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-heading font-bold mb-4">
-              <span className="text-neon-cyan">Our </span>
-              <span className="text-neon-magenta">Team</span>
+              <span className="text-neon-cyan">Meet the Team </span>
+              <span className="text-neon-magenta">Behind the City</span>
             </h1>
             <p className="text-xl text-foreground/90 max-w-2xl mx-auto">
-              Meet the dedicated staff keeping HavenRP running smoothly 24/7
+              The dedicated staff keeping HavenRP running smoothly
             </p>
           </div>
         </section>
@@ -115,18 +151,9 @@ const Staff = () => {
                   </div>
                 </div>
 
-                <p className="text-foreground/80 text-sm mb-4 leading-relaxed">
+                <p className="text-foreground/80 text-sm mb-6 leading-relaxed">
                   {member.bio}
                 </p>
-
-                <div className="space-y-2 text-xs text-muted-foreground mb-4">
-                  <p>
-                    <span className="font-semibold text-foreground">Timezone:</span> {member.timezone}
-                  </p>
-                  <p>
-                    <span className="font-semibold text-foreground">Contact:</span> {member.contact}
-                  </p>
-                </div>
 
                 <Button
                   size="sm"
