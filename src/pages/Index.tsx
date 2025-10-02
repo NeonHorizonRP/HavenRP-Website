@@ -6,7 +6,7 @@ import { FeatureTiles } from "@/components/FeatureTiles";
 import { Button } from "@/components/ui/button";
 import { MessageSquare, FileCheck, Gamepad2 } from "lucide-react";
 import { siteConfig } from "@/config/site";
-import heroBg from "@/assets/hero-bg-new.png";
+import havenLogoHero from "@/assets/haven-logo-hero.png";
 import pageBg from "@/assets/page-bg.png";
 
 const Index = () => {
@@ -23,12 +23,13 @@ const Index = () => {
         className="relative min-h-screen flex items-center justify-center pt-20"
       >
         <div className="relative z-10 text-center px-4 animate-fade-in">
-          {/* Logo placeholder - User should upload their logo */}
+          {/* Logo */}
           <div className="mb-8">
-            <h1 className="text-7xl md:text-8xl font-heading font-bold text-neon-cyan mb-4">
-              HavenRP
-            </h1>
-            <div className="h-1 w-32 bg-gradient-neon mx-auto"></div>
+            <img 
+              src={havenLogoHero} 
+              alt="HavenRP" 
+              className="w-96 max-w-full mx-auto animate-float"
+            />
           </div>
 
           <p className="text-2xl md:text-3xl font-heading text-foreground/90 mb-12">
