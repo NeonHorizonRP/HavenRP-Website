@@ -94,9 +94,6 @@ export const Footer = () => {
             <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/30">
               FiveM Roleplay
             </span>
-            <span className="text-xs px-3 py-1 rounded-full bg-secondary/10 text-secondary border border-secondary/30">
-              Whitelisted
-            </span>
           </div>
         </div>
       </div>
