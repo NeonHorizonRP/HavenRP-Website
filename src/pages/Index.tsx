@@ -52,8 +52,7 @@ const Index = () => {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-secondary text-secondary hover:bg-secondary/10 hover:shadow-neon-magenta transition-all duration-300 text-lg px-8 py-6"
+              className="bg-gradient-neon hover:shadow-neon-cyan transition-all duration-300 text-lg px-8 py-6"
               asChild
             >
               <a href="/apply">
@@ -63,8 +62,7 @@ const Index = () => {
             </Button>
             <Button
               size="lg"
-              variant="outline"
-              className="border-accent text-accent hover:bg-accent/10 hover:shadow-neon-purple transition-all duration-300 text-lg px-8 py-6"
+              className="bg-gradient-neon hover:shadow-neon-cyan transition-all duration-300 text-lg px-8 py-6"
               asChild
             >
               <a href={`fivem://connect/${siteConfig.fivemConnect}`}>
