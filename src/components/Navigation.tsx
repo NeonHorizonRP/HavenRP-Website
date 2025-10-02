@@ -1,11 +1,15 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
-import { MessageSquare, Gamepad2, LogIn } from "lucide-react";
+import { MessageSquare, Gamepad2, LogIn, LogOut } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import havenLogo from "@/assets/haven-logo.png";
+import { useEffect, useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { User } from "@supabase/supabase-js";
 
 export const Navigation = () => {
   const location = useLocation();
+  const [user, setUser] = useState<User | null>(null);
   
   const navLinks = [
     { name: "Home", path: "/" },
@@ -17,6 +21,24 @@ export const Navigation = () => {
   ];
 
   const isActive = (path: string) => location.pathname === path;
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data: { session } }) => {
+      setUser(session?.user ?? null);
+    });
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      (_event, session) => {
+        setUser(session?.user ?? null);
+      }
+    );
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  const handleSignOut = async () => {
+    await supabase.auth.signOut();
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-primary/20">
@@ -70,17 +92,29 @@ export const Navigation = () => {
                 Discord
               </a>
             </Button>
-            <Button
-              variant="secondary"
-              size="sm"
-              className="transition-all duration-300"
-              asChild
-            >
-              <Link to="/auth">
-                <LogIn className="w-4 h-4 mr-2" />
-                Sign In
-              </Link>
-            </Button>
+            {user ? (
+              <Button
+                variant="secondary"
+                size="sm"
+                className="transition-all duration-300"
+                onClick={handleSignOut}
+              >
+                <LogOut className="w-4 h-4 mr-2" />
+                Sign Out
+              </Button>
+            ) : (
+              <Button
+                variant="secondary"
+                size="sm"
+                className="transition-all duration-300"
+                asChild
+              >
+                <Link to="/auth">
+                  <LogIn className="w-4 h-4 mr-2" />
+                  Sign In
+                </Link>
+              </Button>
+            )}
             <Button
               size="sm"
               className="bg-gradient-neon hover:shadow-neon-cyan transition-all duration-300"
