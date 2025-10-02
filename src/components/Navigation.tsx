@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
 import { MessageSquare, Gamepad2 } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import havenLogo from "@/assets/haven-logo.png";
 
 export const Navigation = () => {
   const location = useLocation();
@@ -21,10 +22,8 @@ export const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-primary/20">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="text-2xl font-heading font-bold text-neon-cyan">
-              HavenRP
-            </div>
+          <Link to="/" className="flex items-center">
+            <img src={havenLogo} alt="HavenRP" className="h-12 w-auto" />
           </Link>
 
           <div className="hidden md:flex items-center gap-8">

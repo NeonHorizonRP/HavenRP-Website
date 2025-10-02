@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { MessageSquare, Shield, FileText } from "lucide-react";
 import { Button } from "./ui/button";
 import { siteConfig } from "@/config/site";
+import havenLogo from "@/assets/haven-logo.png";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -11,9 +12,7 @@ export const Footer = () => {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-heading font-bold text-neon-cyan mb-4">
-              {siteConfig.serverName}
-            </h3>
+            <img src={havenLogo} alt="HavenRP" className="h-16 w-auto mb-4" />
             <p className="text-muted-foreground text-sm">
               {siteConfig.serverTagline}
             </p>
