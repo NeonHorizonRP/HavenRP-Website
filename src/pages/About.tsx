@@ -44,11 +44,6 @@ const About = () => {
         {/* Hero Section */}
         <section
           className="relative min-h-[60vh] flex items-center justify-center mb-16"
-          style={{
-            backgroundImage: `url(${heroBg})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
         >
           <div className="relative z-10 container mx-auto px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-heading font-bold mb-4">
