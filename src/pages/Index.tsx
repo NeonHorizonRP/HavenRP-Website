@@ -21,11 +21,6 @@ const Index = () => {
       {/* Hero Section */}
       <section 
         className="relative min-h-screen flex items-center justify-center pt-20"
-        style={{
-          backgroundImage: `url(${heroBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
       >
         <div className="relative z-10 text-center px-4 animate-fade-in">
           {/* Logo placeholder - User should upload their logo */}
