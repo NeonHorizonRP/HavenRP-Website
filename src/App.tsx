@@ -8,6 +8,7 @@ import Rules from "./pages/Rules";
 import Apply from "./pages/Apply";
 import About from "./pages/About";
 import Staff from "./pages/Staff";
+import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/apply" element={<Apply />} />
           <Route path="/about" element={<About />} />
           <Route path="/staff" element={<Staff />} />
+          <Route path="/auth" element={<Auth />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
