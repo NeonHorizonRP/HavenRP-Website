@@ -4,6 +4,7 @@ import { MessageSquare, Crown, Shield, Code, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import staffBg from "@/assets/staff-bg.jpg";
+import pageBg from "@/assets/page-bg.png";
 
 const Staff = () => {
   const staffMembers = [
@@ -70,7 +71,12 @@ const Staff = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div 
+      className="min-h-screen bg-cover bg-center bg-fixed"
+      style={{ backgroundImage: `url(${pageBg})` }}
+    >
+      <div className="absolute inset-0 bg-black/70"></div>
+      <div className="relative z-10">
       <Navigation />
 
       <main className="pt-24 pb-16">
@@ -178,6 +184,7 @@ const Staff = () => {
       </main>
 
       <Footer />
+      </div>
     </div>
   );
 };

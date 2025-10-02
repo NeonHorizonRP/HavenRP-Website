@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
+import pageBg from "@/assets/page-bg.png";
 
 const Rules = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -103,7 +104,12 @@ const Rules = () => {
   })).filter(section => section.rules.length > 0);
 
   return (
-    <div className="min-h-screen">
+    <div 
+      className="min-h-screen bg-cover bg-center bg-fixed"
+      style={{ backgroundImage: `url(${pageBg})` }}
+    >
+      <div className="absolute inset-0 bg-black/70"></div>
+      <div className="relative z-10">
       <Navigation />
 
       <main className="pt-24 pb-16">
@@ -182,6 +188,7 @@ const Rules = () => {
       </main>
 
       <Footer />
+      </div>
     </div>
   );
 };

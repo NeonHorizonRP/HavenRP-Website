@@ -7,10 +7,16 @@ import { Button } from "@/components/ui/button";
 import { MessageSquare, FileCheck, Gamepad2 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import heroBg from "@/assets/hero-bg.jpg";
+import pageBg from "@/assets/page-bg.png";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div 
+      className="min-h-screen bg-cover bg-center bg-fixed"
+      style={{ backgroundImage: `url(${pageBg})` }}
+    >
+      <div className="absolute inset-0 bg-black/70"></div>
+      <div className="relative z-10">
       <Navigation />
 
       {/* Hero Section */}
@@ -86,6 +92,7 @@ const Index = () => {
       <FeatureTiles />
 
       <Footer />
+      </div>
     </div>
   );
 };

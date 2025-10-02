@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Target, Users, Zap, Shield } from "lucide-react";
 import aboutBg from "@/assets/about-bg.jpg";
+import pageBg from "@/assets/page-bg.png";
 
 const About = () => {
   const values = [
@@ -32,7 +33,12 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div 
+      className="min-h-screen bg-cover bg-center bg-fixed"
+      style={{ backgroundImage: `url(${pageBg})` }}
+    >
+      <div className="absolute inset-0 bg-black/70"></div>
+      <div className="relative z-10">
       <Navigation />
 
       <main className="pt-24 pb-16">
@@ -187,6 +193,7 @@ const About = () => {
       </main>
 
       <Footer />
+      </div>
     </div>
   );
 };

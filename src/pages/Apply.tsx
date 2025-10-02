@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, MessageSquare, FileText } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import pageBg from "@/assets/page-bg.png";
 
 const Apply = () => {
   const checklist = [
@@ -15,7 +16,12 @@ const Apply = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div 
+      className="min-h-screen bg-cover bg-center bg-fixed"
+      style={{ backgroundImage: `url(${pageBg})` }}
+    >
+      <div className="absolute inset-0 bg-black/70"></div>
+      <div className="relative z-10">
       <Navigation />
 
       <main className="pt-24 pb-16">
@@ -148,6 +154,7 @@ const Apply = () => {
       </main>
 
       <Footer />
+      </div>
     </div>
   );
 };

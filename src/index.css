@@ -97,9 +97,9 @@
 }
 
 @layer components {
-  /* Glassmorphic Card */
+  /* Glassmorphic Card - More transparent to show background */
   .glass-card {
-    @apply bg-card/30 backdrop-blur-xl border border-white/10 rounded-xl;
+    @apply bg-card/20 backdrop-blur-xl border border-white/10 rounded-xl;
   }
 
   /* Neon Text Glow */
