@@ -1,12 +1,91 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
+import { StatsStrip } from "@/components/StatsStrip";
+import { ScrollingBar } from "@/components/ScrollingBar";
+import { FeatureTiles } from "@/components/FeatureTiles";
+import { Button } from "@/components/ui/button";
+import { MessageSquare, FileCheck, Gamepad2 } from "lucide-react";
+import { siteConfig } from "@/config/site";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen">
+      <Navigation />
+
+      {/* Hero Section */}
+      <section 
+        className="relative min-h-screen flex items-center justify-center pt-20"
+        style={{
+          backgroundImage: `url(${heroBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-overlay"></div>
+        
+        <div className="relative z-10 text-center px-4 animate-fade-in">
+          {/* Logo placeholder - User should upload their logo */}
+          <div className="mb-8">
+            <h1 className="text-7xl md:text-8xl font-heading font-bold text-neon-cyan mb-4">
+              HavenRP
+            </h1>
+            <div className="h-1 w-32 bg-gradient-neon mx-auto"></div>
+          </div>
+
+          <p className="text-2xl md:text-3xl font-heading text-foreground/90 mb-12">
+            {siteConfig.serverTagline}
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              size="lg"
+              className="bg-gradient-neon hover:shadow-neon-cyan transition-all duration-300 text-lg px-8 py-6"
+              asChild
+            >
+              <a href={siteConfig.discordInvite} target="_blank" rel="noopener noreferrer">
+                <MessageSquare className="w-5 h-5 mr-2" />
+                Join Discord
+              </a>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-secondary text-secondary hover:bg-secondary/10 hover:shadow-neon-magenta transition-all duration-300 text-lg px-8 py-6"
+              asChild
+            >
+              <a href="/apply">
+                <FileCheck className="w-5 h-5 mr-2" />
+                Apply Now
+              </a>
+            </Button>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-accent text-accent hover:bg-accent/10 hover:shadow-neon-purple transition-all duration-300 text-lg px-8 py-6"
+              asChild
+            >
+              <a href={`fivem://connect/${siteConfig.fivemConnect}`}>
+                <Gamepad2 className="w-5 h-5 mr-2" />
+                Connect to Server
+              </a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Scrolling Bar */}
+      <ScrollingBar />
+
+      {/* Stats Strip */}
+      <div className="container mx-auto px-4">
+        <StatsStrip />
       </div>
+
+      {/* Features */}
+      <FeatureTiles />
+
+      <Footer />
     </div>
   );
 };
