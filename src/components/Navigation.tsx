@@ -12,6 +12,7 @@ export const Navigation = () => {
     { name: "Apply", path: "/apply" },
     { name: "About", path: "/about" },
     { name: "Staff", path: "/staff" },
+    { name: "Store", path: "https://store.haven-rp.com/", external: true },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -28,17 +29,29 @@ export const Navigation = () => {
 
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`font-medium transition-all duration-300 ${
-                  isActive(link.path)
-                    ? "text-primary"
-                    : "text-foreground/70 hover:text-primary"
-                }`}
-              >
-                {link.name}
-              </Link>
+              link.external ? (
+                <a
+                  key={link.path}
+                  href={link.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-foreground/70 hover:text-primary transition-all duration-300"
+                >
+                  {link.name}
+                </a>
+              ) : (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={`font-medium transition-all duration-300 ${
+                    isActive(link.path)
+                      ? "text-primary"
+                      : "text-foreground/70 hover:text-primary"
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
           </div>
 
