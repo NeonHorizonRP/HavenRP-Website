@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import { MessageSquare, Shield, FileText } from "lucide-react";
+import { MessageSquare, Shield, FileText, Youtube, Award } from "lucide-react";
 import { Button } from "./ui/button";
 import { siteConfig } from "@/config/site";
 import havenLogo from "@/assets/haven-logo.png";
+import { FaReddit, FaTiktok } from "react-icons/fa";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -86,11 +87,59 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-muted-foreground">
-            © {currentYear} {siteConfig.serverName}. All rights reserved.
-          </p>
-          <div className="flex items-center gap-4">
+        <div className="border-t border-white/10 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-6">
+            <p className="text-sm text-muted-foreground">
+              © {currentYear} {siteConfig.serverName}. All rights reserved.
+            </p>
+            <div className="flex items-center gap-4">
+              {siteConfig.reddit && (
+                <a
+                  href={siteConfig.reddit}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  aria-label="Reddit"
+                >
+                  <FaReddit className="w-5 h-5" />
+                </a>
+              )}
+              {siteConfig.tiktok && (
+                <a
+                  href={siteConfig.tiktok}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  aria-label="TikTok"
+                >
+                  <FaTiktok className="w-5 h-5" />
+                </a>
+              )}
+              {siteConfig.youtube && (
+                <a
+                  href={siteConfig.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  aria-label="YouTube"
+                >
+                  <Youtube className="w-5 h-5" />
+                </a>
+              )}
+              {siteConfig.medal && (
+                <a
+                  href={siteConfig.medal}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  aria-label="Medal"
+                >
+                  <Award className="w-5 h-5" />
+                </a>
+              )}
+            </div>
+          </div>
+          <div className="flex justify-center">
             <span className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary border border-primary/30">
               FiveM Roleplay
             </span>
