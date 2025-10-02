@@ -58,7 +58,6 @@ const Auth = () => {
       style={{ backgroundImage: `url(${pageBg})` }}
     >
       <Navigation />
-      
       <main className="container mx-auto px-4 pt-32 pb-20">
         <div className="max-w-md mx-auto">
           <div className="bg-card/90 backdrop-blur-sm border border-border rounded-lg p-8 shadow-lg">
