@@ -54,9 +54,13 @@ const Auth = () => {
 
   return (
     <div 
-      className="min-h-screen bg-cover bg-center bg-no-repeat"
+      className="min-h-screen bg-cover bg-center bg-no-repeat relative"
       style={{ backgroundImage: `url(${pageBg})` }}
     >
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/35 z-0" />
+      
+      <div className="relative z-10">
       <Navigation />
       <main className="container mx-auto px-4 pt-32 pb-20">
         <div className="max-w-md mx-auto">
@@ -87,6 +91,7 @@ const Auth = () => {
       </main>
 
       <Footer />
+      </div>
     </div>
   );
 };
