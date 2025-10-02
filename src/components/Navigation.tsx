@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "./ui/button";
-import { MessageSquare, Gamepad2 } from "lucide-react";
+import { MessageSquare, Gamepad2, LogIn } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import havenLogo from "@/assets/haven-logo.png";
 
@@ -69,6 +69,17 @@ export const Navigation = () => {
                 <MessageSquare className="w-4 h-4 mr-2" />
                 Discord
               </a>
+            </Button>
+            <Button
+              variant="secondary"
+              size="sm"
+              className="transition-all duration-300"
+              asChild
+            >
+              <Link to="/auth">
+                <LogIn className="w-4 h-4 mr-2" />
+                Sign In
+              </Link>
             </Button>
             <Button
               size="sm"
