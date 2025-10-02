@@ -16,7 +16,7 @@ const Index = () => {
       style={{ backgroundImage: `url(${pageBg})` }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/35 z-0" />
+      <div className="absolute inset-0 bg-black/45 z-0" />
       
       <div className="relative z-10">
       <Navigation />
