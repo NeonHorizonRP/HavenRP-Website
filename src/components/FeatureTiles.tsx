@@ -3,14 +3,6 @@ import { Shield, Briefcase, DollarSign, Siren, Heart, Calendar } from "lucide-re
 export const FeatureTiles = () => {
   const features = [
     {
-      icon: Shield,
-      title: "Whitelist RP",
-      description: "Quality roleplay with vetted players through our comprehensive application process.",
-      color: "text-primary",
-      borderColor: "border-primary/30",
-      hoverGlow: "hover:shadow-neon-cyan",
-    },
-    {
       icon: Briefcase,
       title: "Jobs & Factions",
       description: "Join diverse careers and criminal organizations. Build your empire or protect the city.",
