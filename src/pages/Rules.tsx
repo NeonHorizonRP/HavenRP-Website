@@ -108,7 +108,6 @@ const Rules = () => {
       className="min-h-screen bg-cover bg-center bg-fixed"
       style={{ backgroundImage: `url(${pageBg})` }}
     >
-      <div className="absolute inset-0 bg-black/70"></div>
       <div className="relative z-10">
       <Navigation />
 
