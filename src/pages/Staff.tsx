@@ -117,15 +117,13 @@ const Staff = () => {
 
       <main className="pt-24 pb-16">
         {/* Hero Section */}
-        <section
-          className="relative min-h-[50vh] flex items-center justify-center mb-16"
-        >
+        <section className="relative min-h-[40vh] flex items-center justify-center mb-8">
           <div className="relative z-10 container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-heading font-bold mb-4">
+            <h1 className="text-4xl md:text-5xl font-heading font-bold mb-3">
               <span className="text-neon-cyan">Meet the Team </span>
               <span className="text-neon-magenta">Behind the City</span>
             </h1>
-            <p className="text-xl text-foreground/90 max-w-2xl mx-auto">
+            <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
               The dedicated staff keeping HavenRP running smoothly
             </p>
           </div>
@@ -136,7 +134,7 @@ const Staff = () => {
             {staffMembers.map((member, index) => (
               <div
                 key={index}
-                className={`glass-card p-6 border ${member.borderColor} hover:shadow-neon-cyan transition-all duration-300 group`}
+                className={`bg-black/50 backdrop-blur-sm border ${member.borderColor} rounded-lg p-6 hover:shadow-neon-cyan transition-all duration-300 group`}
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className={`p-3 rounded-lg bg-card/50 border ${member.borderColor}`}>
@@ -176,7 +174,7 @@ const Staff = () => {
           </div>
 
           {/* Join Staff CTA */}
-          <div className="mt-16 glass-card p-8 text-center border-2 border-accent/30">
+          <div className="mt-16 bg-black/50 backdrop-blur-sm border border-white/10 rounded-lg p-8 text-center border-2 border-accent/30">
             <Shield className="w-16 h-16 text-accent mx-auto mb-4" />
             <h2 className="text-2xl font-heading font-bold mb-4 text-accent">
               Interested in Joining Our Team?

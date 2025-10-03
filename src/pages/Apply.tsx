@@ -25,19 +25,23 @@ const Apply = () => {
       <Navigation />
 
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="text-center mb-12">
-            <h1 className="text-5xl font-heading font-bold mb-4">
+        {/* Hero Section */}
+        <section className="relative min-h-[40vh] flex items-center justify-center mb-8">
+          <div className="relative z-10 container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-5xl font-heading font-bold mb-3">
               <span className="text-neon-cyan">Join </span>
               <span className="text-neon-magenta">HavenRP</span>
             </h1>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
               Start your journey in Los Santos with our whitelist application process.
             </p>
           </div>
+        </section>
+
+        <div className="container mx-auto px-4 max-w-4xl">
 
           {/* How It Works */}
-          <div className="glass-card p-8 mb-8">
+          <div className="bg-black/50 backdrop-blur-sm border border-white/10 rounded-lg p-8 mb-8">
             <h2 className="text-2xl font-heading font-bold mb-6 text-primary">
               How Whitelisting Works
             </h2>
@@ -60,7 +64,7 @@ const Apply = () => {
           </div>
 
           {/* Requirements Checklist */}
-          <div className="glass-card p-8 mb-8">
+          <div className="bg-black/50 backdrop-blur-sm border border-white/10 rounded-lg p-8 mb-8">
             <h2 className="text-2xl font-heading font-bold mb-6 text-secondary">
               Requirements Checklist
             </h2>
@@ -75,7 +79,7 @@ const Apply = () => {
           </div>
 
           {/* Application CTA */}
-          <div className="glass-card p-8 text-center border-2 border-primary/30">
+          <div className="bg-black/50 backdrop-blur-sm border border-white/10 rounded-lg p-8 text-center border-2 border-primary/30">
             <FileText className="w-16 h-16 text-primary mx-auto mb-4" />
             <h2 className="text-2xl font-heading font-bold mb-4 text-primary">
               Ready to Apply?
@@ -123,7 +127,7 @@ const Apply = () => {
           </div>
 
           {/* Tips Section */}
-          <div className="mt-8 glass-card p-8">
+          <div className="mt-8 bg-black/50 backdrop-blur-sm border border-white/10 rounded-lg p-8">
             <h3 className="text-xl font-heading font-bold mb-4 text-accent">
               Application Tips
             </h3>

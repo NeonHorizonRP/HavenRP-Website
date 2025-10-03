@@ -43,15 +43,13 @@ const About = () => {
 
       <main className="pt-24 pb-16">
         {/* Hero Section */}
-        <section
-          className="relative min-h-[60vh] flex items-center justify-center mb-16"
-        >
+        <section className="relative min-h-[40vh] flex items-center justify-center mb-8">
           <div className="relative z-10 container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-heading font-bold mb-4">
+            <h1 className="text-4xl md:text-5xl font-heading font-bold mb-3">
               <span className="text-neon-cyan">About </span>
               <span className="text-neon-magenta">HavenRP</span>
             </h1>
-            <p className="text-xl text-foreground/90 max-w-2xl mx-auto">
+            <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
               Building the future of serious FiveM roleplay, one story at a time.
             </p>
           </div>
@@ -59,7 +57,7 @@ const About = () => {
 
         <div className="container mx-auto px-4 max-w-5xl">
           {/* Origin Story */}
-          <div className="glass-card p-8 mb-12">
+          <div className="bg-black/50 backdrop-blur-sm border border-white/10 rounded-lg p-8 mb-12">
             <h2 className="text-3xl font-heading font-bold mb-6 text-primary">
               Our Story
             </h2>
@@ -94,7 +92,7 @@ const About = () => {
               {values.map((value, index) => (
                 <div
                   key={index}
-                  className="glass-card p-6 border border-white/10 hover:border-white/20 transition-all duration-300"
+                  className="bg-black/50 backdrop-blur-sm border border-white/10 rounded-lg p-6 hover:border-white/20 transition-all duration-300"
                 >
                   <value.icon className={`w-10 h-10 ${value.color} mb-4`} />
                   <h3 className={`text-xl font-heading font-bold mb-2 ${value.color}`}>
@@ -109,7 +107,7 @@ const About = () => {
           </div>
 
           {/* Features Highlights */}
-          <div className="glass-card p-8 mb-12">
+          <div className="bg-black/50 backdrop-blur-sm border border-white/10 rounded-lg p-8 mb-12">
             <h2 className="text-3xl font-heading font-bold mb-6 text-accent">
               Server Highlights
             </h2>
@@ -162,7 +160,7 @@ const About = () => {
           </div>
 
           {/* Screenshots Placeholder */}
-          <div className="glass-card p-8">
+          <div className="bg-black/50 backdrop-blur-sm border border-white/10 rounded-lg p-8">
             <h2 className="text-3xl font-heading font-bold mb-6 text-primary text-center">
               Server Screenshots
             </h2>
