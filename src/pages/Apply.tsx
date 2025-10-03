@@ -20,8 +20,6 @@ const Apply = () => {
       className="min-h-screen bg-cover bg-center bg-fixed relative"
       style={{ backgroundImage: `url(${pageBg})` }}
     >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/60 z-0" />
       
       <div className="relative z-10">
       <Navigation />
