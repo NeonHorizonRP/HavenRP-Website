@@ -220,19 +220,20 @@ const Rules = () => {
       <Navigation />
 
       <main className="pt-24 pb-16">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h1 className="text-5xl font-heading font-bold mb-4">
+        {/* Hero Section */}
+        <section className="relative min-h-[60vh] flex items-center justify-center mb-16">
+          <div className="relative z-10 container mx-auto px-4 text-center">
+            <h1 className="text-5xl md:text-6xl font-heading font-bold mb-4">
               <span className="text-neon-cyan">Haven RP </span>
               <span className="text-neon-magenta">Rules</span>
             </h1>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-xl text-foreground/90 max-w-2xl mx-auto">
               Please read and follow all rules to ensure a quality roleplay experience for everyone.
             </p>
-            <p className="text-muted-foreground text-lg">
-              Please read and follow all rules to ensure a quality roleplay experience.
-            </p>
           </div>
+        </section>
+
+        <div className="container mx-auto px-4">
 
           {/* Search */}
           <div className="max-w-2xl mx-auto mb-12">
@@ -247,6 +248,7 @@ const Rules = () => {
               />
             </div>
           </div>
+
 
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             {/* Sidebar */}
