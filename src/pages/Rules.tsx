@@ -244,16 +244,17 @@ const Rules = () => {
                 placeholder="Search rules..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 bg-card/50 border-primary/30 focus:border-primary"
+                className="pl-10 bg-black/30 backdrop-blur-sm border-primary/30 focus:border-primary"
               />
             </div>
           </div>
 
 
+
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             {/* Sidebar */}
             <aside className="lg:col-span-1">
-              <div className="glass-card p-6 sticky top-24">
+              <div className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg p-6 sticky top-24">
                 <h3 className="font-heading font-bold text-lg mb-4 text-primary">
                   Quick Jump
                 </h3>
@@ -271,10 +272,11 @@ const Rules = () => {
               </div>
             </aside>
 
+
             {/* Rules Content */}
             <div className="lg:col-span-3 space-y-8">
               {filteredSections.map((section) => (
-                <div key={section.id} id={section.id} className="glass-card p-8 scroll-mt-24">
+                <div key={section.id} id={section.id} className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg p-8 scroll-mt-24">
                   <h2 className="text-2xl font-heading font-bold mb-6 text-primary">
                     {section.title}
                   </h2>
@@ -290,7 +292,7 @@ const Rules = () => {
               ))}
 
               {filteredSections.length === 0 && (
-                <div className="glass-card p-12 text-center">
+                <div className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg p-12 text-center">
                   <p className="text-muted-foreground">No rules found matching your search.</p>
                 </div>
               )}
