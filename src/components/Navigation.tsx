@@ -83,7 +83,7 @@ export const Navigation = () => {
               <Button
                 variant="outline"
                 size="sm"
-                className="border-primary/50 text-primary hover:bg-primary/10 hover:shadow-neon-cyan transition-all duration-300"
+                className="border-primary/50 text-primary bg-black/40 hover:bg-primary/20 hover:shadow-neon-cyan transition-all duration-300"
                 asChild
               >
                 <a
@@ -171,7 +171,7 @@ export const Navigation = () => {
                     <Button
                       variant="outline"
                       size="sm"
-                      className="border-primary/50 text-primary hover:bg-primary/10 hover:shadow-neon-cyan transition-all duration-300 w-full"
+                      className="border-primary/50 text-primary bg-black/40 hover:bg-primary/20 hover:shadow-neon-cyan transition-all duration-300 w-full"
                       asChild
                     >
                       <a
