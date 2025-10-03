@@ -221,49 +221,50 @@ const Rules = () => {
 
       <main className="pt-24 pb-16">
         {/* Hero Section */}
-        <section className="relative min-h-[60vh] flex items-center justify-center mb-16">
+        <section className="relative min-h-[40vh] flex items-center justify-center mb-8">
           <div className="relative z-10 container mx-auto px-4 text-center">
-            <h1 className="text-5xl md:text-6xl font-heading font-bold mb-4">
-              <span className="text-neon-cyan">Haven RP </span>
+            <h1 className="text-4xl md:text-5xl font-heading font-bold mb-3">
+              <span className="text-neon-cyan">Server </span>
               <span className="text-neon-magenta">Rules</span>
             </h1>
-            <p className="text-xl text-foreground/90 max-w-2xl mx-auto">
-              Please read and follow all rules to ensure a quality roleplay experience for everyone.
+            <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+              Read and follow all rules to enjoy your time on Haven
             </p>
           </div>
         </section>
 
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 max-w-7xl">
 
           {/* Search */}
-          <div className="max-w-2xl mx-auto mb-12">
+          <div className="max-w-xl mx-auto mb-8">
             <div className="relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
               <Input
                 type="text"
                 placeholder="Search rules..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 bg-black/30 backdrop-blur-sm border-primary/30 focus:border-primary"
+                className="pl-11 h-12 bg-black/30 backdrop-blur-sm border-primary/30 focus:border-primary rounded-full"
               />
             </div>
           </div>
 
 
 
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
             {/* Sidebar */}
             <aside className="lg:col-span-1">
-              <div className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg p-6 sticky top-24">
-                <h3 className="font-heading font-bold text-lg mb-4 text-primary">
-                  Quick Jump
+              <div className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg p-5 sticky top-24">
+                <h3 className="font-heading font-bold text-base mb-3 text-primary">
+                  Categories
                 </h3>
-                <nav className="space-y-2">
+                <nav className="space-y-1">
                   {rulesSections.map((section) => (
                     <a
                       key={section.id}
                       href={`#${section.id}`}
-                      className="block text-sm text-muted-foreground hover:text-primary transition-colors py-1"
+                      className="block text-xs text-muted-foreground hover:text-primary transition-colors py-1.5 px-2 rounded hover:bg-white/5"
                     >
                       {section.title}
                     </a>
@@ -274,17 +275,17 @@ const Rules = () => {
 
 
             {/* Rules Content */}
-            <div className="lg:col-span-3 space-y-8">
+            <div className="lg:col-span-4 space-y-6">
               {filteredSections.map((section) => (
-                <div key={section.id} id={section.id} className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg p-8 scroll-mt-24">
-                  <h2 className="text-2xl font-heading font-bold mb-6 text-primary">
+                <div key={section.id} id={section.id} className="bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg p-6 scroll-mt-24">
+                  <h2 className="text-xl font-heading font-bold mb-4 text-primary">
                     {section.title}
                   </h2>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2.5">
                     {section.rules.map((rule, index) => (
                       <li key={index} className="flex gap-3">
-                        <span className="text-secondary font-bold mt-1">•</span>
-                        <span className="text-foreground/90">{rule}</span>
+                        <span className="text-primary font-bold mt-0.5">•</span>
+                        <span className="text-foreground/90 text-sm">{rule}</span>
                       </li>
                     ))}
                   </ul>
